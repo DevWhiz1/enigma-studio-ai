@@ -39,8 +39,8 @@ const config: Config = {
           '50%': { transform: 'translateY(-20px)' },
         },
         'pulse-glow': {
-          '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(0, 240, 255, 0.5)' },
-          '50%': { opacity: 0.8, boxShadow: '0 0 40px rgba(0, 240, 255, 0.8)' },
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(0, 240, 255, 0.5)' },
+          '50%': { opacity: '0.8', boxShadow: '0 0 40px rgba(0, 240, 255, 0.8)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-1000px 0' },

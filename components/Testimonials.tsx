@@ -113,7 +113,7 @@ export default function Testimonials() {
                   <div className="relative z-10">
                     <Quote className="w-12 h-12 text-neon-cyan mb-6 opacity-50" />
                     <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                      "{testimonial.content}"
+                    {"\u201C"}{testimonial.content}{"\u201D"}
                     </p>
                     <div className="flex items-center justify-between">
                       <div>

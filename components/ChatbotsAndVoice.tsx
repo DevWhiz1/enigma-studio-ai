@@ -187,7 +187,7 @@ export default function ChatbotsAndVoice() {
     <section
       id="services"
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-4 sm:px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div
@@ -197,30 +197,30 @@ export default function ChatbotsAndVoice() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
             AI Solutions
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto px-4">
             Custom chatbots and voice assistants for seamless customer experiences
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {/* Custom Chatbots Panel */}
-          <div className="chat-container bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 md:p-8 overflow-hidden" style={{ opacity: 0 }}>
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2 text-white">Custom Chatbots</h3>
-              <p className="text-sm text-gray-400">
+          <div className="chat-container bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 overflow-hidden" style={{ opacity: 0 }}>
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">Custom Chatbots</h3>
+              <p className="text-xs sm:text-sm text-gray-400">
                 We build custom AI chat solutions for instant support and a seamless audience experience.
               </p>
             </div>
 
             {/* Tabs */}
-            <div className="flex gap-2 mb-6">
+            <div className="flex gap-1 sm:gap-2 mb-4 sm:mb-6">
               {tabs.map((tab) => (
                 <div
                   key={tab}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 pointer-events-none ${
+                  className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 pointer-events-none ${
                     activeTab === tab
                       ? 'bg-white/10 text-white border border-white/20'
                       : 'text-gray-400'
@@ -232,7 +232,7 @@ export default function ChatbotsAndVoice() {
             </div>
 
             {/* Chat Messages */}
-            <div className="space-y-4 mb-6 min-h-[300px]">
+            <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6 min-h-[250px] sm:min-h-[300px]">
               <AnimatePresence>
                 {displayedMessages.map((message) => (
                   <motion.div
@@ -244,13 +244,13 @@ export default function ChatbotsAndVoice() {
                     className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-lg px-4 py-3 ${
+                      className={`max-w-[85%] sm:max-w-[80%] rounded-lg px-3 sm:px-4 py-2 sm:py-3 ${
                         message.isUser
                           ? 'bg-white/10 text-white border border-white/20'
                           : 'bg-white/5 text-gray-300 border border-white/10'
                       }`}
                     >
-                      <p className="text-sm leading-relaxed">{message.text}</p>
+                      <p className="text-xs sm:text-sm leading-relaxed">{message.text}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -263,11 +263,11 @@ export default function ChatbotsAndVoice() {
                   animate={{ opacity: 1 }}
                   className="flex gap-1 items-center"
                 >
-                  <div className="flex gap-1 px-4 py-3 bg-white/5 rounded-lg border border-white/10">
+                  <div className="flex gap-1 px-3 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg border border-white/10">
                     {[0, 1, 2].map((i) => (
                       <motion.div
                         key={i}
-                        className="w-2 h-2 bg-white/40 rounded-full"
+                        className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white/40 rounded-full"
                         animate={{
                           y: [0, -8, 0],
                           opacity: [0.4, 1, 0.4],
@@ -285,30 +285,30 @@ export default function ChatbotsAndVoice() {
             </div>
 
             {/* Input Area */}
-            <div className="flex items-center gap-2 p-4 bg-white/5 rounded-lg border border-white/10">
-              <div className="flex items-center gap-2 pointer-events-none">
-                <div className="p-2 rounded-lg">
-                  <Plus className="w-5 h-5 text-gray-400" />
+            <div className="flex items-center gap-1 sm:gap-2 p-2 sm:p-4 bg-white/5 rounded-lg border border-white/10">
+              <div className="flex items-center gap-1 sm:gap-2 pointer-events-none">
+                <div className="p-1.5 sm:p-2 rounded-lg">
+                  <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 </div>
-                <div className="p-2 rounded-lg">
-                  <LinkIcon className="w-5 h-5 text-gray-400" />
+                <div className="hidden sm:block p-1.5 sm:p-2 rounded-lg">
+                  <LinkIcon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 </div>
-                <div className="p-2 rounded-lg">
-                  <Folder className="w-5 h-5 text-gray-400" />
+                <div className="hidden sm:block p-1.5 sm:p-2 rounded-lg">
+                  <Folder className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 </div>
               </div>
-              <div className="flex-1 relative">
+              <div className="flex-1 relative min-w-0">
                 <input
                   type="text"
                   value={inputValue}
                   readOnly
                   disabled
-                  className="w-full bg-transparent text-white placeholder-gray-500 outline-none px-4 pointer-events-none"
+                  className="w-full bg-transparent text-white placeholder-gray-500 outline-none px-2 sm:px-4 text-xs sm:text-sm pointer-events-none"
                   placeholder="Type your message..."
                 />
                 {isTyping && (
                   <motion.span
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-lg"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white text-base sm:text-lg"
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ duration: 0.8, repeat: Infinity }}
                   >
@@ -316,28 +316,28 @@ export default function ChatbotsAndVoice() {
                   </motion.span>
                 )}
               </div>
-              <div className="flex items-center gap-2 pointer-events-none">
-                <div className="p-2 rounded-lg">
-                  <Mic className="w-5 h-5 text-gray-400" />
+              <div className="flex items-center gap-1 sm:gap-2 pointer-events-none">
+                <div className="p-1.5 sm:p-2 rounded-lg">
+                  <Mic className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 </div>
-                <div className="p-2 rounded-lg">
-                  <Send className="w-5 h-5 text-white" />
+                <div className="p-1.5 sm:p-2 rounded-lg">
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Voice Assistants Panel */}
-          <div className="voice-container bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 md:p-8 overflow-hidden" style={{ opacity: 0 }}>
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2 text-white">Voice Assistants</h3>
-              <p className="text-sm text-gray-400">
+          <div className="voice-container bg-[#0a0a0a] border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 overflow-hidden" style={{ opacity: 0 }}>
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">Voice Assistants</h3>
+              <p className="text-xs sm:text-sm text-gray-400">
                 We build smart voice solutions for effortless control, better access, and engaging user experiences.
               </p>
             </div>
 
             {/* Scrollable Calls List */}
-            <div className="relative h-[500px] overflow-hidden">
+            <div className="relative h-[400px] sm:h-[500px] overflow-hidden">
               <div 
                 ref={scrollContainerRef}
                 className="space-y-3"
@@ -346,11 +346,11 @@ export default function ChatbotsAndVoice() {
                 {[...incomingCalls, ...incomingCalls, ...incomingCalls].map((call, index) => (
                   <motion.div
                     key={`${call.id}-${index}`}
-                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors group"
+                    className="flex items-center justify-between p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors group"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4">
                       <motion.div
-                        className="text-3xl"
+                        className="text-2xl sm:text-3xl"
                         animate={{ 
                           scale: [1, 1.1, 1],
                         }}
@@ -363,10 +363,10 @@ export default function ChatbotsAndVoice() {
                         {call.avatar}
                       </motion.div>
                       <div>
-                        <p className="text-white font-medium">{call.name}</p>
-                        <div className="flex items-center gap-2 mt-1">
+                        <p className="text-white font-medium text-sm sm:text-base">{call.name}</p>
+                        <div className="flex items-center gap-1.5 sm:gap-2 mt-1">
                           <motion.div
-                            className="w-2 h-2 bg-red-500 rounded-full"
+                            className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-500 rounded-full"
                             animate={{
                               opacity: [1, 0.3, 1],
                               scale: [1, 1.2, 1],
@@ -376,16 +376,16 @@ export default function ChatbotsAndVoice() {
                               repeat: Infinity,
                             }}
                           />
-                          <span className="text-sm text-gray-400">INCOMING CALL</span>
+                          <span className="text-xs sm:text-sm text-gray-400">INCOMING CALL</span>
                         </div>
                       </div>
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
                       whileTap={{ scale: 0.9 }}
-                      className="p-3 rounded-lg border border-white/20 hover:bg-white/10 transition-colors"
+                      className="p-2 sm:p-3 rounded-lg border border-white/20 hover:bg-white/10 transition-colors"
                     >
-                      <Mic className="w-5 h-5 text-white" />
+                      <Mic className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </motion.button>
                   </motion.div>
                 ))}

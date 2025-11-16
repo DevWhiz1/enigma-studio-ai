@@ -80,7 +80,7 @@ export default function FAQ() {
     <section
       ref={sectionRef}
       id="faqs"
-      className="min-h-screen py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-4xl">
         <motion.div
@@ -88,7 +88,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">FAQs</span>

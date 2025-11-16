@@ -99,7 +99,7 @@ export default function FinalCTA() {
     <section
       id="cta"
       ref={sectionRef}
-      className="relative min-h-screen w-full overflow-hidden bg-black flex items-center justify-center"
+      className="relative py-20 md:py-32 w-full overflow-hidden bg-black flex items-center justify-center"
     >
       {/* Purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/30 via-black to-black" />
@@ -184,9 +184,9 @@ export default function FinalCTA() {
 
         <motion.button
           ref={buttonRef}
-          whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.5)' }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-4 bg-black border border-white/20 rounded-lg font-semibold text-white flex items-center gap-2 hover:bg-white/5 transition-all duration-300 mx-auto"
+          className="px-8 py-4 bg-white hover:bg-gray-100 rounded-lg font-semibold text-black flex items-center gap-2 transition-all duration-300 mx-auto"
         >
           <span>Book a Free Strategy Session</span>
           <ArrowRight className="w-5 h-5" />

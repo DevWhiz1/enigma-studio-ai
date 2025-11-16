@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation'
-import HeroSimple from '@/components/HeroSimple'
+import HeroSection from '@/components/HeroSection'
 import Companies from '@/components/Companies'
 import ChatbotsAndVoice from '@/components/ChatbotsAndVoice'
 import AIAutomation from '@/components/AIAutomation'
@@ -11,14 +11,14 @@ import Pricing from '@/components/Pricing'
 import Team from '@/components/Team'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
-import FinalCTA from '@/components/FinalCTA'
+import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="relative bg-black">
       <Navigation />
-      <HeroSimple />
+      <HeroSection />
       {/* <Companies /> */}
       <ChatbotsAndVoice />
       <AIAutomation />
@@ -27,7 +27,7 @@ export default function Home() {
       <CaseStudies />
       {/* <Testimonials /> */}
       <Pricing />
-      <FinalCTA />
+      <CTA />
       {/* <Team /> */}
       <FAQ />
       <Contact />

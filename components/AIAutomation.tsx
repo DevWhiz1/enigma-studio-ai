@@ -180,7 +180,7 @@ export default function AIAutomation() {
     <section
       id="automation"
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div

@@ -112,7 +112,7 @@ export default function Contact() {
       icon: MapPin,
       title: 'Office:',
       description: 'Reach out to us any time for questions, support, or inquiries.',
-      value: 'C-1 Block B-17, Islamad, Pakistan',
+      value: 'C-1 Block B-17, Islamabad, Pakistan',
       href: '#',
     },
   ]
@@ -121,7 +121,7 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">

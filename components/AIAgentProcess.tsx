@@ -125,7 +125,7 @@ export default function AIAgentProcess() {
     <section
       id="process"
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">

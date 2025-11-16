@@ -121,7 +121,7 @@ export default function CaseStudies() {
     <section
       id="case-studies"
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div
@@ -173,10 +173,14 @@ export default function CaseStudies() {
                     </div>
 
                     {/* CTA */}
-                    <div className="flex items-center text-white font-medium group-hover:text-purple-200 transition-colors">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full mt-4 px-4 py-3 bg-white hover:bg-gray-100 rounded-lg font-semibold text-black flex items-center justify-center gap-2 transition-all duration-300"
+                    >
                       <span>View Details</span>
-                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                    </div>
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.button>
                   </div>
                 </div>
               </motion.div>

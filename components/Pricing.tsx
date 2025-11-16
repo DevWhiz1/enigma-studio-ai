@@ -133,7 +133,7 @@ export default function Pricing() {
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-32 px-6 relative overflow-hidden bg-black"
+      className="py-16 md:py-20 px-6 relative overflow-hidden bg-black"
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div
@@ -196,7 +196,7 @@ export default function Pricing() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-3 rounded-lg font-semibold mb-8 bg-black border border-white/20 text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300"
+                    className="w-full py-3 rounded-lg font-semibold mb-8 bg-white hover:bg-gray-100 text-black transition-all duration-300"
                   >
                     Get Started
                   </motion.button>

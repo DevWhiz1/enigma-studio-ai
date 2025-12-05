@@ -139,7 +139,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - Copyright */}
-        <div className="pt-8 border-t border-white/10 flex items-center justify-center gap-4">
+        <div className="pt-8 flex items-center justify-center gap-4">
           <p className="text-white text-sm">
             © 2025, Enigma. Designed By Ahmad.
           </p>

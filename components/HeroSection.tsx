@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { Eye, Phone } from 'lucide-react'
-
 export default function HeroSimple() {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
@@ -73,12 +72,26 @@ export default function HeroSimple() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Purple gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/30 via-black to-black" />
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+       
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ filter: 'brightness(1.12) contrast(1.05)' }}
+      > 
+      <source src="https://res.cloudinary.com/dxrr3gb42/video/upload/v1764920792/HomePage_bfheru.mp4"/>
+        {/* <source src="https://res.cloudinary.com/dxrr3gb42/video/upload/f_auto,q_auto/HomePage_bfheru.mp4" type="video/mp4" /> */}
+      </video>
+
+
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-800/10 via-black/10 to-black/20 z-10" />
       
-      {/* Grid background */}
+      {/* Grid background (subtle) */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-10 z-10"
         style={{
           backgroundImage: `
             linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
@@ -89,11 +102,11 @@ export default function HeroSimple() {
       />
 
       {/* Animated particles - white and purple dots */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         {particles.map((particle) => (
           <motion.div
             key={particle.id}
-            className="absolute w-1 h-1 bg-white rounded-full"
+            className="absolute w-1 h-1 bg-white/40 rounded-full"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -114,7 +127,7 @@ export default function HeroSimple() {
         {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
             key={`purple-${i}`}
-            className="absolute w-1 h-1 bg-purple-400 rounded-full"
+            className="absolute w-1 h-1 bg-purple-400/40 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -133,7 +146,7 @@ export default function HeroSimple() {
         ))}
       </div>
 
-      <div className="relative z-10 flex h-screen items-center justify-center">
+      <div className="relative z-20 flex h-screen items-center justify-center">
         <div className="container mx-auto px-6 text-center">
           {/* Pill tagline */}
           <motion.div
@@ -180,7 +193,7 @@ export default function HeroSimple() {
             <motion.button
               whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-black border border-white/20 rounded-lg font-semibold text-white flex items-center gap-2 hover:bg-white/5 transition-all duration-300"
+              className="px-6 py-3 bg-white border border-white/20 rounded-lg font-semibold text-black flex items-center gap-2 transition-all duration-300"
             >
               <Eye className="w-5 h-5" />
               See our pricing
@@ -188,7 +201,7 @@ export default function HeroSimple() {
             <motion.button
               whileHover={{ scale: 1.05, borderColor: 'rgba(255, 255, 255, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-black border border-white/20 rounded-lg font-semibold text-white flex items-center gap-2 hover:bg-white/5 transition-all duration-300"
+              className="px-6 py-3 bg-white border border-white/20 rounded-lg font-semibold text-black flex items-center gap-2 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
               Book a free call
